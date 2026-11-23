@@ -1,0 +1,13 @@
+name: pymc_env_2
+channels:
+  - defaults
+dependencies:
+  - scipy
+  - numpy
+  - pytensor
+  - pymc
+  - python=3.10
+  - pandas
+  - spyder-kernels=3.0
+  - ffmpeg
+prefix: /opt/anaconda3/envs/pymc_env_2

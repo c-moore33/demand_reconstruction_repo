@@ -5,11 +5,11 @@ Created on Wed Jul  1 11:45:10 2026
 
 @author: cameronmoore
 """
-# from pathlib import Path
-import sys
+# # from pathlib import Path
+# import sys
 
-## change to your local filepath
-sys.path.insert(0, "/Users/cameron/Library/CloudStorage/Box-Box/Cameron/central_computer/demand_reconstruction_public")
+# ## change to your local filepath
+# sys.path.insert(0, "/Users/cameron/Library/CloudStorage/Box-Box/Cameron/central_computer/demand_reconstruction_public")
 
 import pandas as pd 
 from glob import glob
@@ -29,8 +29,7 @@ train_df=pd.read_csv('../preprocessing/cleaned_data/model_train.csv')
 ## read full model results
 ## change to your local filepath
 ## pick appropiate model output
-file_path='../../../../../../../Desktop/traces/%s'
-trace=az.from_netcdf(file_path%'demand_reconstruction_model_withold_0.nc')
+trace=az.from_netcdf('../model/demand_reconstruction_model_withold_5.nc')
 
 ## read in census data
 ## change to your local filepath

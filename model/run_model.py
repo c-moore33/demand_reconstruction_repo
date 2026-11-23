@@ -17,7 +17,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--version", type=int, default=1)
+parser.add_argument("--version", type=int, default=6)
 parser.add_argument("--cluster", action="store_true")
 args = parser.parse_args()
 
@@ -45,9 +45,10 @@ yearly_train_df=yearly_train_df.drop_duplicates()
 if cluster:
     household_dem_df=pd.read_csv('demand_reconstruction/data/model_household_dem_df.csv')
 else:
-    household_dem_df=pd.read_csv('../preprocessing/household_demand_data/model_household_dem_df.csv')
+    household_dem_df=pd.read_csv('../preprocessing/cleaned_data/model_household_dem_df.csv')
     
 household_dem_df=household_dem_df.drop(columns='Unnamed: 0')
+
 
 
 # %%
@@ -208,4 +209,4 @@ with hierarchical_model:
         discard_tuned_samples=True)
     
 ## output to NetCDF file
-az.to_netcdf(trace_1, "demand_reconstruction/output/%s.nc"%output_name)
+az.to_netcdf(trace_1, "%s.nc"%output_name)

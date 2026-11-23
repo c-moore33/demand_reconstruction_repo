@@ -24,11 +24,11 @@ yearly_train_df=train_df.loc[:,['yearID','yearID_idx','PWSID','PWSID_idx','rev']
 yearly_train_df=yearly_train_df.drop_duplicates()
 
 ## change to proper local filepath
-file_path='../../../../../../../../Desktop/traces/%s'
+file_path='../../model/%s'
 
 
 ## choose trace
-full_trace='demand_reconstruction_model_withold_0.nc'
+full_trace='demand_reconstruction_model_withold_5.nc'
 
 month_names=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 
@@ -321,8 +321,5 @@ for ax, label in zip([ax1, ax2, ax3, ax4], ['a', 'b', 'c','d']):
     
 plt.show()
 
-
-
-fig.savefig("output/figure_2.png", dpi=300, bbox_inches="tight")
 
 
