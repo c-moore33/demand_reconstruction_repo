@@ -12,4 +12,4 @@ dependencies:
   - ffmpeg
   - arviz
   - matplotlib
-  -scikit-learn
+  - scikit-learn
