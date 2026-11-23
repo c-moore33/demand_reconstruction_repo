@@ -35,10 +35,23 @@ The model is implemented in Python and relies on the following packages:
 
 ## Running the model
 
-1. Install the required Python dependencies.
+1. Create and activate the Conda environment specified in `environment.yml`:
+
+   ```bash
+   conda env create -f environment.yml
+   conda activate pymc_env_2
+   ```
+
 2. Verify the input data paths and model configuration in `run_model.py`.
-3. Run the aggregate-only model (version 6).
-4. Use the resulting NetCDF file and corresponding training data to calculate the utility-performance metrics.
+
+3. Navigate to the `model` directory and run the aggregate-only model (version 6):
+
+   ```bash
+   cd model
+   python run_model.py --version 6
+   ```
+
+4. The model output is saved as a NetCDF (`.nc`) file, which can be used alongside the corresponding training data to calculate utility-performance metrics using the scripts in `postprocessing/`.
 
 ## File paths
 
