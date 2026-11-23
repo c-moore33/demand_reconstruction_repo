@@ -1,4 +1,4 @@
-name: pymc_env_2
+name: pymc_env
 channels:
   - defaults
 dependencies:
@@ -10,4 +10,6 @@ dependencies:
   - pandas
   - spyder-kernels=3.0
   - ffmpeg
-prefix: /opt/anaconda3/envs/pymc_env_2
+  - arviz
+  - matplotlib
+  -scikit-learn

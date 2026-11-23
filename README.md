@@ -39,7 +39,7 @@ The model is implemented in Python and relies on the following packages:
 
    ```bash
    conda env create -f environment.yml
-   conda activate pymc_env_2
+   conda activate pymc_env
    ```
 
 2. Verify the input data paths and model configuration in `run_model.py`.
